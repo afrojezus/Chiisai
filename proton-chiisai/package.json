@@ -1,6 +1,7 @@
 {
   "name": "proton-chiisai",
   "version": "0.0.1",
+  "author": "thor",
   "private": true,
   "scripts": {
     "start": "node_modules/.bin/babel-node index.tsx",

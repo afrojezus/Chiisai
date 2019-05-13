@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Chiisai
 //
-//  Created by Thoralf Thelle on 12/05/2019.
+//  Created by Thor on 12/05/2019.
 //  Copyright © 2019 thor. All rights reserved.
 //
 

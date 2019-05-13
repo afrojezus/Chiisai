@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "main": "dist/main.js",
   "author": "thor",
-  "license": "MIT",
   "private": true,
   "scripts": {
     "build": "tsc",

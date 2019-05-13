@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Chiisai
 //
-//  Created by Thoralf Thelle on 12/05/2019.
+//  Created by Thor on 12/05/2019.
 //  Copyright © 2019 thor. All rights reserved.
 //
 
@@ -16,7 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var eventMonitor: EventMonitor?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        YoutubeKit.shared.setAPIKey("AIzaSyDcImot3NaiAxRa6sjxoOpe7YpoOJtZYpo")
+        YoutubeKit.shared.setAPIKey(YT_API_KEY)
         if let button = statusItem.button {
             button.image = NSImage(named:NSImage.Name("StatusBarButtonImage"))
             button.action = #selector(togglePopover(_:))

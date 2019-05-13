@@ -83,6 +83,26 @@
 		43433FB82288985D00F21DDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43433FB62288985D00F21DDD /* Main.storyboard */; };
 		43433FC12288AF6000F21DDD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43433FC02288AF6000F21DDD /* MainViewController.swift */; };
 		43433FC32288B17400F21DDD /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43433FC22288B17400F21DDD /* EventMonitor.swift */; };
+		4377A3C0228A001D00C0C395 /* Sakura.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377A3BF228A001D00C0C395 /* Sakura.swift */; };
+		4377A3C3228A006300C0C395 /* SakuraInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377A3C2228A006300C0C395 /* SakuraInfo.swift */; };
+		4377A3C5228A008700C0C395 /* SakuraExtraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377A3C4228A008700C0C395 /* SakuraExtraction.swift */; };
+		4377A3C7228A00AE00C0C395 /* SakuraError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377A3C6228A00AE00C0C395 /* SakuraError.swift */; };
+		4377A3CA228A00DB00C0C395 /* ArrayFuckery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377A3C9228A00DB00C0C395 /* ArrayFuckery.swift */; };
+		4377A3CC228A00F400C0C395 /* StringFuckery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377A3CB228A00F400C0C395 /* StringFuckery.swift */; };
+		4377A3D8228A1EA600C0C395 /* RichPresence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377A3CF228A1EA600C0C395 /* RichPresence.swift */; };
+		4377A3D9228A1EA600C0C395 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377A3D0228A1EA600C0C395 /* Enums.swift */; };
+		4377A3DA228A1EA600C0C395 /* JoinRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377A3D1228A1EA600C0C395 /* JoinRequest.swift */; };
+		4377A3DB228A1EA600C0C395 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377A3D2228A1EA600C0C395 /* Delegate.swift */; };
+		4377A3DC228A1EA600C0C395 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377A3D3228A1EA600C0C395 /* Register.swift */; };
+		4377A3DD228A1EA600C0C395 /* SwordRPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377A3D4228A1EA600C0C395 /* SwordRPC.swift */; };
+		4377A3DE228A1EA600C0C395 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377A3D5228A1EA600C0C395 /* Events.swift */; };
+		4377A3DF228A1EA600C0C395 /* RPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377A3D6228A1EA600C0C395 /* RPC.swift */; };
+		4377A3E0228A1EA600C0C395 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377A3D7228A1EA600C0C395 /* Utils.swift */; };
+		4377A3E7228A219A00C0C395 /* SocketProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377A3E2228A219A00C0C395 /* SocketProtocols.swift */; };
+		4377A3E8228A219A00C0C395 /* SocketUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377A3E3228A219A00C0C395 /* SocketUtils.swift */; };
+		4377A3E9228A219A00C0C395 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4377A3E5228A219A00C0C395 /* Info.plist */; };
+		4377A3EA228A219A00C0C395 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377A3E6228A219A00C0C395 /* Socket.swift */; };
+		4377A3EC228A341200C0C395 /* SuperSecretKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377A3EB228A341200C0C395 /* SuperSecretKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -165,6 +185,27 @@
 		43433FBA2288985D00F21DDD /* Chiisai.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Chiisai.entitlements; sourceTree = "<group>"; };
 		43433FC02288AF6000F21DDD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		43433FC22288B17400F21DDD /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
+		4377A3BF228A001D00C0C395 /* Sakura.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sakura.swift; sourceTree = "<group>"; };
+		4377A3C2228A006300C0C395 /* SakuraInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SakuraInfo.swift; sourceTree = "<group>"; };
+		4377A3C4228A008700C0C395 /* SakuraExtraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SakuraExtraction.swift; sourceTree = "<group>"; };
+		4377A3C6228A00AE00C0C395 /* SakuraError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SakuraError.swift; sourceTree = "<group>"; };
+		4377A3C9228A00DB00C0C395 /* ArrayFuckery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayFuckery.swift; sourceTree = "<group>"; };
+		4377A3CB228A00F400C0C395 /* StringFuckery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFuckery.swift; sourceTree = "<group>"; };
+		4377A3CF228A1EA600C0C395 /* RichPresence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RichPresence.swift; sourceTree = "<group>"; };
+		4377A3D0228A1EA600C0C395 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		4377A3D1228A1EA600C0C395 /* JoinRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinRequest.swift; sourceTree = "<group>"; };
+		4377A3D2228A1EA600C0C395 /* Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
+		4377A3D3228A1EA600C0C395 /* Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		4377A3D4228A1EA600C0C395 /* SwordRPC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwordRPC.swift; sourceTree = "<group>"; };
+		4377A3D5228A1EA600C0C395 /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		4377A3D6228A1EA600C0C395 /* RPC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPC.swift; sourceTree = "<group>"; };
+		4377A3D7228A1EA600C0C395 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		4377A3E2228A219A00C0C395 /* SocketProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketProtocols.swift; sourceTree = "<group>"; };
+		4377A3E3228A219A00C0C395 /* SocketUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketUtils.swift; sourceTree = "<group>"; };
+		4377A3E4228A219A00C0C395 /* Socket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Socket.h; sourceTree = "<group>"; };
+		4377A3E5228A219A00C0C395 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4377A3E6228A219A00C0C395 /* Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		4377A3EB228A341200C0C395 /* SuperSecretKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperSecretKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,6 +355,9 @@
 		43433FA42288985C00F21DDD = {
 			isa = PBXGroup;
 			children = (
+				4377A3E1228A219A00C0C395 /* Socket */,
+				4377A3CD228A1EA600C0C395 /* SwordRPC */,
+				4377A3C1228A003700C0C395 /* Sakura */,
 				432068ED2288D218002070A8 /* YoutubeKit */,
 				43433FAF2288985C00F21DDD /* Chiisai */,
 				43433FAE2288985C00F21DDD /* Products */,
@@ -339,8 +383,66 @@
 				43433FB92288985D00F21DDD /* Info.plist */,
 				43433FBA2288985D00F21DDD /* Chiisai.entitlements */,
 				43433FC22288B17400F21DDD /* EventMonitor.swift */,
+				4377A3EB228A341200C0C395 /* SuperSecretKeys.swift */,
 			);
 			path = Chiisai;
+			sourceTree = "<group>";
+		};
+		4377A3C1228A003700C0C395 /* Sakura */ = {
+			isa = PBXGroup;
+			children = (
+				4377A3C8228A00CC00C0C395 /* Extensions */,
+				4377A3BF228A001D00C0C395 /* Sakura.swift */,
+				4377A3C2228A006300C0C395 /* SakuraInfo.swift */,
+				4377A3C4228A008700C0C395 /* SakuraExtraction.swift */,
+				4377A3C6228A00AE00C0C395 /* SakuraError.swift */,
+			);
+			path = Sakura;
+			sourceTree = "<group>";
+		};
+		4377A3C8228A00CC00C0C395 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4377A3C9228A00DB00C0C395 /* ArrayFuckery.swift */,
+				4377A3CB228A00F400C0C395 /* StringFuckery.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4377A3CD228A1EA600C0C395 /* SwordRPC */ = {
+			isa = PBXGroup;
+			children = (
+				4377A3CE228A1EA600C0C395 /* Types */,
+				4377A3D2228A1EA600C0C395 /* Delegate.swift */,
+				4377A3D3228A1EA600C0C395 /* Register.swift */,
+				4377A3D4228A1EA600C0C395 /* SwordRPC.swift */,
+				4377A3D5228A1EA600C0C395 /* Events.swift */,
+				4377A3D6228A1EA600C0C395 /* RPC.swift */,
+				4377A3D7228A1EA600C0C395 /* Utils.swift */,
+			);
+			path = SwordRPC;
+			sourceTree = "<group>";
+		};
+		4377A3CE228A1EA600C0C395 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				4377A3CF228A1EA600C0C395 /* RichPresence.swift */,
+				4377A3D0228A1EA600C0C395 /* Enums.swift */,
+				4377A3D1228A1EA600C0C395 /* JoinRequest.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		4377A3E1228A219A00C0C395 /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				4377A3E2228A219A00C0C395 /* SocketProtocols.swift */,
+				4377A3E3228A219A00C0C395 /* SocketUtils.swift */,
+				4377A3E4228A219A00C0C395 /* Socket.h */,
+				4377A3E5228A219A00C0C395 /* Info.plist */,
+				4377A3E6228A219A00C0C395 /* Socket.swift */,
+			);
+			path = Socket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,8 +478,11 @@
 					43433FAC2288985C00F21DDD = {
 						CreatedOnToolsVersion = 10.2.1;
 						SystemCapabilities = {
-							com.apple.Sandbox = {
+							com.apple.HardenedRuntime = {
 								enabled = 1;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
 							};
 						};
 					};
@@ -408,6 +513,7 @@
 			files = (
 				43433FB52288985D00F21DDD /* Assets.xcassets in Resources */,
 				43433FB82288985D00F21DDD /* Main.storyboard in Resources */,
+				4377A3E9228A219A00C0C395 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +524,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4377A3D9228A1EA600C0C395 /* Enums.swift in Sources */,
 				4320694B2288D218002070A8 /* SearchVideoLicense.swift in Sources */,
 				432069552288D218002070A8 /* Filter.swift in Sources */,
 				432069852288D218002070A8 /* ResponseError.swift in Sources */,
@@ -425,9 +532,12 @@
 				432069862288D218002070A8 /* RequestError.swift in Sources */,
 				432069732288D218002070A8 /* HTTPMethod.swift in Sources */,
 				432069752288D218002070A8 /* VideoCategoryListRequest.swift in Sources */,
+				4377A3C7228A00AE00C0C395 /* SakuraError.swift in Sources */,
 				432069442288D218002070A8 /* RequestableExtensions.swift in Sources */,
 				4320697C2288D218002070A8 /* CaptionListRequest.swift in Sources */,
+				4377A3DA228A1EA600C0C395 /* JoinRequest.swift in Sources */,
 				432069652288D218002070A8 /* Thumbnail.swift in Sources */,
+				4377A3C3228A006300C0C395 /* SakuraInfo.swift in Sources */,
 				432069742288D218002070A8 /* VideoAbuseReportReasonsListRequest.swift in Sources */,
 				432069402288D218002070A8 /* YoutubeDataAPI.swift in Sources */,
 				4320696D2288D218002070A8 /* SearchList.swift in Sources */,
@@ -438,6 +548,8 @@
 				432069522288D218002070A8 /* SearchVideoSyndicated.swift in Sources */,
 				4320696A2288D218002070A8 /* PlaylistsList.swift in Sources */,
 				432069812288D218002070A8 /* CommentListRequest.swift in Sources */,
+				4377A3DE228A1EA600C0C395 /* Events.swift in Sources */,
+				4377A3DB228A1EA600C0C395 /* Delegate.swift in Sources */,
 				4320696E2288D218002070A8 /* PageInfo.swift in Sources */,
 				432069762288D218002070A8 /* PlaylistsListRequest.swift in Sources */,
 				432069622288D218002070A8 /* Snippet.swift in Sources */,
@@ -445,8 +557,10 @@
 				432069592288D218002070A8 /* SearchVideoCaption.swift in Sources */,
 				43433FC12288AF6000F21DDD /* MainViewController.swift in Sources */,
 				432069832288D218002070A8 /* ActivityInsertRequest.swift in Sources */,
+				4377A3DF228A1EA600C0C395 /* RPC.swift in Sources */,
 				432069432288D218002070A8 /* BoolExtensions.swift in Sources */,
 				432069692288D218002070A8 /* I18nLanguagesList.swift in Sources */,
+				4377A3E8228A219A00C0C395 /* SocketUtils.swift in Sources */,
 				432069412288D218002070A8 /* YoutubeKit.swift in Sources */,
 				4320695A2288D218002070A8 /* SearchSafeMode.swift in Sources */,
 				4320694D2288D218002070A8 /* SearchEventType.swift in Sources */,
@@ -466,24 +580,33 @@
 				4320694A2288D218002070A8 /* VideoCategory.swift in Sources */,
 				432069802288D218002070A8 /* I18nLanguagesListRequest.swift in Sources */,
 				432069602288D218002070A8 /* VideoCategoriesList.swift in Sources */,
+				4377A3E0228A1EA600C0C395 /* Utils.swift in Sources */,
 				432069562288D218002070A8 /* SearchVideoDuration.swift in Sources */,
 				432069642288D218002070A8 /* Localized.swift in Sources */,
 				432069482288D218002070A8 /* Requestable.swift in Sources */,
+				4377A3D8228A1EA600C0C395 /* RichPresence.swift in Sources */,
 				432069582288D218002070A8 /* CommentTextFormat.swift in Sources */,
+				4377A3CA228A00DB00C0C395 /* ArrayFuckery.swift in Sources */,
 				4320695B2288D218002070A8 /* ApiSession.swift in Sources */,
+				4377A3C5228A008700C0C395 /* SakuraExtraction.swift in Sources */,
+				4377A3E7228A219A00C0C395 /* SocketProtocols.swift in Sources */,
 				432069822288D218002070A8 /* ChannelListRequest.swift in Sources */,
 				432069772288D218002070A8 /* PlaylistItemsListRequest.swift in Sources */,
 				43433FB12288985C00F21DDD /* AppDelegate.swift in Sources */,
 				43433FC32288B17400F21DDD /* EventMonitor.swift in Sources */,
+				4377A3EC228A341200C0C395 /* SuperSecretKeys.swift in Sources */,
 				4320694F2288D218002070A8 /* CommentModerationStatus.swift in Sources */,
 				4320697A2288D218002070A8 /* SearchListRequest.swift in Sources */,
 				4320695F2288D218002070A8 /* Statistics.swift in Sources */,
 				432069612288D218002070A8 /* SubscriptionsList.swift in Sources */,
+				4377A3DC228A1EA600C0C395 /* Register.swift in Sources */,
 				432069572288D218002070A8 /* SearchVideoDimension.swift in Sources */,
+				4377A3EA228A219A00C0C395 /* Socket.swift in Sources */,
 				4320697F2288D218002070A8 /* GuideCategoriesListRequest.swift in Sources */,
 				432069492288D218002070A8 /* SearchVideoDefinition.swift in Sources */,
 				4320695D2288D218002070A8 /* ResourceID.swift in Sources */,
 				4320697E2288D218002070A8 /* VideoListRequest.swift in Sources */,
+				4377A3DD228A1EA600C0C395 /* SwordRPC.swift in Sources */,
 				4320697B2288D218002070A8 /* I18nRegionsListRequest.swift in Sources */,
 				4320694C2288D218002070A8 /* SearchVideoType.swift in Sources */,
 				4320696B2288D218002070A8 /* PlaylistItemsList.swift in Sources */,
@@ -491,6 +614,8 @@
 				4320694E2288D218002070A8 /* SearchResourceType.swift in Sources */,
 				432069702288D218002070A8 /* CommentThreadsList.swift in Sources */,
 				432069542288D218002070A8 /* ResultOrder.swift in Sources */,
+				4377A3C0228A001D00C0C395 /* Sakura.swift in Sources */,
+				4377A3CC228A00F400C0C395 /* StringFuckery.swift in Sources */,
 				432069682288D218002070A8 /* CommentList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -628,10 +753,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Chiisai/Chiisai.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = DTUGNB9TLU;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Chiisai/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -647,15 +772,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Chiisai/Chiisai.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = DTUGNB9TLU;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Chiisai/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				PRODUCT_BUNDLE_IDENTIFIER = com.thor.Chiisai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

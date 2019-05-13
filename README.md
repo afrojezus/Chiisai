@@ -6,6 +6,8 @@ A tiny music player for the desktop. Uses barely any resources, plays the music 
 
 ## Editions
 
+![swift-chiisai 0.1 running on macOS Mojave](https://cdn.discordapp.com/attachments/559904208682221589/577636638558126080/unknown.png)
+
 swift-chiisai: Native macOS edition built in Swift; uses YoutubeKit for yt data.
 
 proton-chiisai: Native cross-platform edition of Chiisai built in TypeScript; uses libui. (Might replace this for something else)

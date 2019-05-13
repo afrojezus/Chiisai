@@ -1,0 +1,27 @@
+{
+  "name": "electron-chiisai",
+  "productName": "Chiisai",
+  "version": "1.0.0",
+  "main": "dist/main.js",
+  "author": "thor",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "start": "yarn build && electron ./dist/main.js",
+    "package": "electron-packager ./ --platform=darwin --arch=x64 --out=out --icon=./icon.icns --overwrite"
+  },
+  "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "@types/node": "^12.0.0",
+    "@types/node-notifier": "^5.4.0",
+    "electron-builder": "^20.40.2",
+    "electron-prebuilt": "^1.4.13",
+    "typescript": "^3.4.5"
+  },
+  "dependencies": {
+    "node-notifier": "^5.4.0",
+    "youtube-api": "^2.0.10"
+  }
+}

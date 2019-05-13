@@ -1,0 +1,4 @@
+.vscode
+proton-chiisai/node_modules
+electron-chiisai/node_modules
+*.log

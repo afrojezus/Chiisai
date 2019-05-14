@@ -1,5 +1,6 @@
 import { app, BrowserWindow, ipcMain, Tray } from 'electron';
 import * as path from 'path';
+import { DISCORD_API } from './supersecretkeys';
 
 const assetsDirectory = path.join(__dirname, '../assets');
 
@@ -20,7 +21,8 @@ app.on('window-all-closed', () => {
 
 const createTray = () => {
   tray = new Tray(path.join(assetsDirectory, 'RikkaTray.png'));
-  tray.setTitle('Chiisai');
+  // Decide if we want to use an title for the app or not.
+  //tray.setTitle('Chiisai');
   tray.on('right-click', toggleWindow);
   tray.on('double-click', toggleWindow);
   tray.on('click', function(event) {
@@ -55,13 +57,13 @@ const createWindow = () => {
     show: false,
     frame: false,
     fullscreenable: false,
-    resizable: false,
+    resizable: true,
     transparent: false,
     webPreferences: {
       backgroundThrottling: false
     }
   });
-  window.loadURL(`file://${path.join(__dirname, 'index.html')}`);
+  window.loadURL(`file://${path.join(__dirname, '../index.html')}`);
 
   // Hide the window when it loses focus
   window.on('blur', () => {

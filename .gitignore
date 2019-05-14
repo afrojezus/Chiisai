@@ -1,6 +1,9 @@
 .vscode
 proton-chiisai/node_modules
 electron-chiisai/node_modules
-swift-chiisai/Chiisai/SuperSecretKeys.swift
 *.log
 swift-chiisai/Chiisai/SuperSecretKeys.swift
+electron-chiisai/src/supersecretkeys.ts
+electron-chiisai/dist/supersecretkeys.js
+electron-chiisai/dist/supersecretkeys.js.map
+electron-chiisai/dist

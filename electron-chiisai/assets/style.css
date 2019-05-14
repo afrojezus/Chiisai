@@ -1,4 +1,114 @@
+* {
+  transition: all 0.2s ease;
+}
+
 html,
 body {
   background: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.bar {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.bar > h1 {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+  font-size: 28px;
+}
+
+.rikkaImg {
+  object-fit: cover;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+#searchField {
+  width: 100%;
+}
+
+#searchField > input {
+  width: 100%;
+  margin: 0;
+  padding: 8px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+#tableView {
+  flex: 1;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+td {
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: gray;
+  color: #fff;
+}
+
+#activityIndicatorLabel {
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  margin: 0;
+}
+
+.tableViewCellThumbnail {
+  width: 50px;
+}
+
+.mainPlayer {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+#currentlyPlayingTitle {
+  font-size: 13px;
+  margin: 0;
+  padding-bottom: 10px;
+  font-weight: 600;
+  color: white;
+}
+
+#currentlyPlayingAuthor {
+  font-size: 11px;
+  margin: 0;
+  padding-bottom: 20px;
+  font-weight: 500;
+  color: white;
+}
+
+.playerClass {
+  margin: -10px;
 }

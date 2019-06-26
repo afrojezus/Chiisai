@@ -2,8 +2,10 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.AVKitIBPlugin" version="14490.70"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaDFRPlugin" version="14490.12"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="the Touch Bar" minToolsVersion="8.1" minSystemVersion="10.12.2" requiredIntegratedClassName="NSTouchBar"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -701,7 +703,7 @@
                                     <action selector="searchActWithSender:" target="XfG-lQ-9wD" id="Zkm-yS-juC"/>
                                 </connections>
                             </searchField>
-                            <avPlayerView fixedFrame="YES" controlsStyle="floating" translatesAutoresizingMaskIntoConstraints="NO" id="IRn-sa-gAp">
+                            <avPlayerView fixedFrame="YES" videoGravity="resizeAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="IRn-sa-gAp">
                                 <rect key="frame" x="0.0" y="0.0" width="345" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </avPlayerView>
@@ -717,7 +719,6 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </view>
                                         <color key="fillColor" red="0.0" green="0.0" blue="0.0" alpha="0.85935525838856663" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <font key="titleFont" metaFont="smallSystem"/>
                                     </box>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jCY-Xo-HSp">
                                         <rect key="frame" x="18" y="49" width="309" height="21"/>
@@ -741,7 +742,7 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DDH-7l-TQd">
+                                    <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DDH-7l-TQd">
                                         <rect key="frame" x="149" y="49" width="178" height="21"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Chiisai" id="N2R-gk-mHj">
@@ -765,14 +766,14 @@ AAAAAAEGA
                                     </caTransition>
                                 </animations>
                             </customView>
-                            <scrollView fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="116" horizontalPageScroll="10" verticalLineScroll="116" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="El5-Zx-ftH">
+                            <scrollView fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="El5-Zx-ftH">
                                 <rect key="frame" x="0.0" y="91" width="345" height="419"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <clipView key="contentView" ambiguous="YES" drawsBackground="NO" id="O0X-vp-cH3">
                                     <rect key="frame" x="0.0" y="0.0" width="345" height="419"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="114" rowSizeStyle="automatic" viewBased="YES" id="q3y-pq-u5c">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" id="q3y-pq-u5c">
                                             <rect key="frame" x="0.0" y="0.0" width="345" height="419"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -799,7 +800,7 @@ AAAAAAEGA
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uiF-hd-5An">
                                                                     <rect key="frame" x="70" y="31" width="272" height="19"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" continuous="YES" sendsActionOnEndEditing="YES" title="Table View Cell" id="iRX-Zr-yJq">
+                                                                    <textFieldCell key="cell" truncatesLastVisibleLine="YES" continuous="YES" sendsActionOnEndEditing="YES" title="Table View Cell" id="iRX-Zr-yJq">
                                                                         <font key="font" metaFont="systemMedium" size="15"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -891,6 +892,26 @@ AAAAAAAAAQg
                             </textField>
                         </subviews>
                     </view>
+                    <touchBar key="touchBar" id="AsE-CQ-qtf">
+                        <touchBarItems>
+                            <touchBarItem id="KSq-RN-phn">
+                                <viewController key="viewController" id="CKs-kT-sYo">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Skh-AY-CdH">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                        <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="Rdu-0d-AHP">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <color key="bezelColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                        <connections>
+                                            <action selector="quitButton:" target="XfG-lQ-9wD" id="EHr-25-1UX"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                                <size key="designTimeSize" width="72" height="16"/>
+                            </touchBarItem>
+                        </touchBarItems>
+                    </touchBar>
                     <connections>
                         <outlet property="currentPlayingAuthor" destination="moi-Hk-dCz" id="Qqn-Xw-Ggz"/>
                         <outlet property="currentPlayingTitle" destination="jCY-Xo-HSp" id="KTs-AG-0aK"/>

@@ -1,7 +1,14 @@
 "use strict";
-exports.__esModule = true;
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result["default"] = mod;
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
 var electron_1 = require("electron");
-var path = require("path");
+var path = __importStar(require("path"));
 var assetsDirectory = path.join(__dirname, '../assets');
 var tray = undefined;
 var window = undefined;
@@ -16,7 +23,8 @@ electron_1.app.on('window-all-closed', function () {
 });
 var createTray = function () {
     tray = new electron_1.Tray(path.join(assetsDirectory, 'RikkaTray.png'));
-    tray.setTitle('Chiisai');
+    // Decide if we want to use an title for the app or not.
+    //tray.setTitle('Chiisai');
     tray.on('right-click', toggleWindow);
     tray.on('double-click', toggleWindow);
     tray.on('click', function (event) {
@@ -43,13 +51,13 @@ var createWindow = function () {
         show: false,
         frame: false,
         fullscreenable: false,
-        resizable: false,
+        resizable: true,
         transparent: false,
         webPreferences: {
             backgroundThrottling: false
         }
     });
-    window.loadURL("file://" + path.join(__dirname, 'index.html'));
+    window.loadURL("file://" + path.join(__dirname, '../index.html'));
     // Hide the window when it loses focus
     window.on('blur', function () {
         if (!window.webContents.isDevToolsOpened()) {

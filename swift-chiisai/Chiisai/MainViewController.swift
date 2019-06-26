@@ -24,6 +24,10 @@ class MainViewController: NSViewController {
     let rpc = SwordRPC(appId: DISCORD_APPID)
     var data: [SearchResult] = []
     
+    @IBAction func quitButton(_ sender: Any) {
+        NSApplication.shared.terminate(self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -98,7 +102,7 @@ class MainViewController: NSViewController {
         reAdjustFrameForTableView()
         indicator.startAnimation(nil)
         indicatorText.stringValue = "LOADING"
-        let request = SearchListRequest(part: [.snippet], searchQuery: query)
+        let request = SearchListRequest(part: [.snippet], maxResults: 10, searchQuery: query)
         
         ApiSession.shared.send(request) { result in
             switch result {
@@ -131,26 +135,11 @@ class MainViewController: NSViewController {
             
             self.indicatorText.stringValue = "LOADING DISCORD RPC"
             
-            var presence = RichPresence()
-            presence.details = "Listening to YouTube"
-            presence.state = "uwu"
-            presence.assets.largeImage = "rikka3x"
-            presence.timestamps.start = Date()
-            self.rpc.setPresence(presence)
+            self.updateRPC(details: "Listening to YouTube", state: url)
             
             var urlString = ""
             if let hiq = info.highestQualityPlayableLink {
                 urlString = hiq
-                let url = URL(string: urlString)
-                
-                let player = AVPlayer(url: url!)
-                self.mainPlayer.player = player
-                
-                self.mainPlayer.player!.play()
-                self.indicator.stopAnimation(nil)
-                self.indicatorText.stringValue = ""
-            } else if let loq = info.lowestQualityPlayableLink {
-                urlString = loq
                 let url = URL(string: urlString)
                 
                 let player = AVPlayer(url: url!)
@@ -218,12 +207,6 @@ class MainViewController: NSViewController {
             
             self.indicatorText.stringValue = "LOADING DISCORD RPC"
             
-            var presence = RichPresence()
-            presence.details = "Listening to \(item.snippet.title)"
-            presence.state = "uwu"
-            presence.timestamps.start = Date()
-            presence.assets.largeImage = "rikka3x"
-            self.rpc.setPresence(presence)
             
             var urlString = ""
             if let hiq = info.highestQualityPlayableLink {
@@ -236,16 +219,7 @@ class MainViewController: NSViewController {
                 self.mainPlayer.player!.play()
                 self.indicator.stopAnimation(nil)
                 self.indicatorText.stringValue = ""
-            } else if let loq = info.lowestQualityPlayableLink {
-                urlString = loq
-                let url = URL(string: urlString)
-                
-                let player = AVPlayer(url: url!)
-                self.mainPlayer.player = player
-                
-                self.mainPlayer.player!.play()
-                self.indicator.stopAnimation(nil)
-                self.indicatorText.stringValue = ""
+                            self.updateRPC(details: item.snippet.title, state: item.snippet.channelTitle)
             } else {
                 self.handlePlayBackError(e: "corruptedURL")
             }
@@ -258,6 +232,16 @@ class MainViewController: NSViewController {
             self.currentPlayingAuthor.stringValue = "ERROR: \(error)"
         }
         
+    }
+    
+    func updateRPC(details: String, state: String)
+    {
+        var presence = RichPresence()
+        presence.details = details
+        presence.state = state
+        presence.timestamps.start = Date()
+        presence.assets.largeImage = "rikka3x"
+        self.rpc.setPresence(presence)
     }
     
     func handlePlayBackError(e: String){
@@ -299,7 +283,7 @@ extension MainViewController: NSTableViewDataSource, NSTableViewDelegate{
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         var image: NSImage?
         var text: String = ""
-        var authorText: String = ""
+        //var authorText: String = ""
         var cellIdentifier: String = ""
         
         
@@ -311,7 +295,7 @@ extension MainViewController: NSTableViewDataSource, NSTableViewDelegate{
             
             image = NSImage(data: ((_thmbdata ?? nil) ?? nil)!) ?? nil
             text = item.snippet.title
-            authorText = item.snippet.channelTitle
+            //authorText = item.snippet.channelTitle
             cellIdentifier = CellIdentifiers.TitleCell
         }
     

@@ -9,10 +9,13 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var electron_1 = require("electron");
 var path = __importStar(require("path"));
+var os_1 = require("os");
 var assetsDirectory = path.join(__dirname, '../assets');
 var tray = undefined;
+var menu = new electron_1.Menu();
 var window = undefined;
-electron_1.app.dock.hide();
+if (os_1.platform() === 'darwin')
+    electron_1.app.dock.hide(); // on macOS, hide the dock icon.
 electron_1.app.on('ready', function () {
     createTray();
     createWindow();
@@ -25,36 +28,41 @@ var createTray = function () {
     tray = new electron_1.Tray(path.join(assetsDirectory, 'RikkaTray.png'));
     // Decide if we want to use an title for the app or not.
     //tray.setTitle('Chiisai');
-    tray.on('right-click', toggleWindow);
+    tray.on('right-click', electron_1.app.quit);
     tray.on('double-click', toggleWindow);
     tray.on('click', function (event) {
         toggleWindow();
         // Show devtools when command clicked
         if (window.isVisible() && process.defaultApp && event.metaKey) {
-            //window.openDevTools({ mode: 'detach' });
+            window.openDevTools({ mode: 'detach' });
         }
     });
 };
 var getWindowPosition = function () {
     var windowBounds = window.getBounds();
     var trayBounds = tray.getBounds();
-    // Center window horizontally below the tray icon
+    // Center window horizontally below (or above) the tray icon
     var x = Math.round(trayBounds.x + trayBounds.width / 2 - windowBounds.width / 2);
-    // Position window 4 pixels vertically below the tray icon
-    var y = Math.round(trayBounds.y + trayBounds.height + 4);
+    // Position window 4 pixels vertically below the tray icon (on macOS). For Windows you get this monstrosity calculation.
+    var y = os_1.platform() === "win32" ? Math.round((trayBounds.y - trayBounds.height * 15)) : Math.round(trayBounds.y + trayBounds.height + 4);
     return { x: x, y: y };
 };
 var createWindow = function () {
     window = new electron_1.BrowserWindow({
-        width: 300,
-        height: 450,
+        width: 350,
+        height: 600,
         show: false,
         frame: false,
         fullscreenable: false,
-        resizable: true,
+        resizable: false,
         transparent: false,
+        vibrancy: 'appearance-based',
+        alwaysOnTop: true,
+        hasShadow: true,
+        skipTaskbar: true,
         webPreferences: {
-            backgroundThrottling: false
+            backgroundThrottling: false,
+            enableBlinkFeatures: 'OverlayScrollbars'
         }
     });
     window.loadURL("file://" + path.join(__dirname, '../index.html'));

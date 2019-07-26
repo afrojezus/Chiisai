@@ -104,7 +104,6 @@ var Chiisai = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         _a.trys.push([0, 2, , 3]);
-                        this._loadingLabel('LOADING');
                         return [4 /*yield*/, this.youtube.searchVideos(query, 10, {})];
                     case 1:
                         results = _a.sent();
@@ -136,29 +135,11 @@ var Chiisai = /** @class */ (function () {
                               return this._streamYTAudio(vid, JSON.parse(info));
                             });*/
                         });
-                        // I ain't gonna bother if this somehow didn't work.
-                        /*for (let i = 0; results.length > 0, i++; ) {
-                          let node = document.createElement('li');
-                          node.setAttribute('video-id', results[i].id);
-                          let titleNode = document.createTextNode(results[i].title);
-                          let authorNode = document.createTextNode(results[i].channel.title);
-                          let imageNode = document.createElement('img');
-                          imageNode.src = results[i].thumbnails.default.url;
-                          imageNode.className = 'tableViewCellThumbnail';
-                  
-                          node.appendChild(titleNode);
-                          node.appendChild(authorNode);
-                          node.appendChild(imageNode);
-                  
-                          this.tableView.appendChild(node);
-                        }*/
-                        this._loadingLabel('');
                         return [3 /*break*/, 3];
                     case 2:
                         error_1 = _a.sent();
-                        this._loadingLabel('');
+                        //this._loadingLabel('');
                         console.error(error_1);
-                        this._handleError(error_1);
                         return [3 /*break*/, 3];
                     case 3: return [2 /*return*/];
                 }
@@ -170,7 +151,6 @@ var Chiisai = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         _a.trys.push([0, 2, , 3]);
-                        this._loadingLabel('LOADING');
                         return [4 /*yield*/, this.youtube.getVideo(url, {})];
                     case 1:
                         video = _a.sent();
@@ -180,9 +160,8 @@ var Chiisai = /** @class */ (function () {
                         return [2 /*return*/, this._streamYTAudio(video.id, video)];
                     case 2:
                         error_2 = _a.sent();
-                        this._loadingLabel('');
+                        //this._loadingLabel('');
                         console.error(error_2);
-                        this._handleError(error_2);
                         return [3 /*break*/, 3];
                     case 3: return [2 /*return*/];
                 }

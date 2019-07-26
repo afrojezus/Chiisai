@@ -9,26 +9,19 @@
   </head>
   <body>
     <header>
-      <div class="bar">
-        <h1>Chiisai</h1>
-        <div style="flex: 1;"></div>
-        <span id="activityIndicatorLabel"></span>
-        <img class="rikkaImg" alt='' src="./assets/Rikka.png" />
-      </div>
       <form id="searchField">
-      <input type="search" placeholder="Search for music" id="searchFieldInput"></input>
+      <input type="search" placeholder="Chiisai"  id="searchFieldInput"></input>
       </form>
     </header>
     <!-- Because go fuck yourself -->
-    <div style="flex: 1; overflow: scroll;">
+    <div style="flex: 1; overflow: scroll; overflow-x: hidden;">
     <table id="tableView">
     </table>
   </div>
 
     <div class="mainPlayer">
-      <h2 id="currentlyPlayingTitle">Not playing</h2>
+      <h2 id="currentlyPlayingTitle"></h2>
       <h3 id="currentlyPlayingAuthor">
-        Please search for music (or add a YouTube link)
       </h3>
       <audio id="player" autoplay controls class="playerClass"></audio>
     </div>

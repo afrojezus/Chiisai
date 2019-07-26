@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "node-notifier": "^5.4.0",
-    "simple-youtube-api": "^5.1.1",
+    "simple-youtube-api": "^5.2.1",
     "youtube-api": "^2.0.10"
   }
 }

@@ -114,7 +114,7 @@ class Chiisai {
 
   _searchYT = async (query: string) => {
     try {
-      this._loadingLabel('LOADING');
+      //this._loadingLabel('LOADING');
       const results = await this.youtube.searchVideos(query, 10, {});
       console.log(results);
       results.map((r: any) => {
@@ -164,17 +164,17 @@ class Chiisai {
 
         this.tableView.appendChild(node);
       }*/
-      this._loadingLabel('');
+      //this._loadingLabel('');
     } catch (error) {
-      this._loadingLabel('');
+      //this._loadingLabel('');
       console.error(error);
-      this._handleError(error);
+      //this._handleError(error);
     }
   };
 
   _directYTURL = async (url: string) => {
     try {
-      this._loadingLabel('LOADING');
+      //this._loadingLabel('LOADING');
       const video = await this.youtube.getVideo(url, {});
       console.log(video);
 
@@ -183,9 +183,9 @@ class Chiisai {
 
       return this._streamYTAudio(video.id, video);
     } catch (error) {
-      this._loadingLabel('');
+      //this._loadingLabel('');
       console.error(error);
-      this._handleError(error);
+      //this._handleError(error);
     }
   };
 

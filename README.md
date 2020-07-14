@@ -6,14 +6,10 @@ A tiny music player for the desktop. Uses barely any resources, plays the music 
 
 ## Editions
 
-![swift-chiisai 0.1 running on macOS Mojave](https://cdn.discordapp.com/attachments/559904208682221589/577636638558126080/unknown.png)
+![chiisai-apple 0.1 running on macOS Mojave](https://cdn.discordapp.com/attachments/559904208682221589/577636638558126080/unknown.png)
 
-swift-chiisai: Native macOS edition built in Swift; uses YoutubeKit for yt data.
+chiisai-apple: Native macOS edition built in Swift; uses YoutubeKit for yt data and SwordRPC for Discord functionality.
 
-proton-chiisai: Native cross-platform edition of Chiisai built in TypeScript; uses libui. (Might replace this for something else)
+![chiisai-js 0.1 running on Windows 10 2004](./assets/chiisai-js.png)
 
-electron-chiisai: Cross-platform edition of Chiisai built with Electron in TypeScript.
-
-uwp-chiisai: Native Windows 10 UWP edition of Chiisai built in C#. (planned)
-
-coffee-chiisai: Cross-platform edition of Chiisai built in Kotlin (planned)
+chiisai-js: Electron edition of Chiisai built in React TypeScript (using electron-react-boilerplate); uses `simple-youtube-api`for yt data and `discord-rpc` for Discord functionality.

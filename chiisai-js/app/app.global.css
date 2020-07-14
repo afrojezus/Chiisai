@@ -1,0 +1,11 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  transition: all 0.3s cubic-bezier(.07,.95,0,1);
+}
+
+body {
+  overflow-x: hidden;
+}

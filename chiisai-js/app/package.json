@@ -16,6 +16,6 @@
   "license": "MIT",
   "dependencies": {
     "@types/node-notifier": "^6.0.1",
-    "node-notifier": "^7.0.1"
+    "node-notifier": "^8.0.1"
   }
 }
